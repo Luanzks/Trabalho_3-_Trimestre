@@ -1,5 +1,7 @@
 # Trabalho_3°_Trimestre
-
+Equipe:
+-Luan Marcos
+-Pedro Gonçalves
  ## Título do jogo: 
  Sugar Rush
  ## Narrativa/Tema:
