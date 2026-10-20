@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://f1vs0kobopee"]
+
+[ext_resource type="Texture2D" uid="uid://b4ye75jutajx6" path="res://Sprites/Inimigos/Ceifador.png" id="1_fcpk2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mcva6"]
+size = Vector2(64, 66)
+
+[node name="Ceifador" type="Area2D" unique_id=618030348]
+
+[node name="Imagem" type="Sprite2D" parent="." unique_id=140450722]
+texture = ExtResource("1_fcpk2")
+
+[node name="Corpo" type="CollisionShape2D" parent="." unique_id=1025289213]
+shape = SubResource("RectangleShape2D_mcva6")
