@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dw3ox1qop85ea"]
+
+[ext_resource type="Texture2D" uid="uid://4x58ks2exhpl" path="res://Sprites/Inimigos/Espantalho.png" id="1_kvvh1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mcva6"]
+size = Vector2(64, 66)
+
+[node name="Espantalho" type="Area2D" unique_id=825516339]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1129475147]
+scale = Vector2(0.496, 0.496)
+texture = ExtResource("1_kvvh1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1016944481]
+shape = SubResource("RectangleShape2D_mcva6")

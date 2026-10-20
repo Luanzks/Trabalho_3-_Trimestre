@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://twdkucd5dwqh"]
+
+[ext_resource type="Texture2D" uid="uid://uxmeu4c5n8gj" path="res://Sprites/Inimigos/Fantasma.png" id="1_n46rq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mcva6"]
+size = Vector2(64, 66)
+
+[node name="Fantasma" type="Area2D" unique_id=618030348]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=27524864]
+scale = Vector2(0.496, 0.496)
+texture = ExtResource("1_n46rq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1025289213]
+shape = SubResource("RectangleShape2D_mcva6")
