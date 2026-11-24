@@ -1,7 +1,10 @@
 extends CharacterBody2D
 
 const SPEED = 120.0
-
+var vidas = 3
+var invencivel := false
+func _ready():
+	add_to_group("jogador")
 func _physics_process(_delta: float) -> void:
 	velocity = Vector2.ZERO
 
@@ -17,9 +20,11 @@ func _physics_process(_delta: float) -> void:
 
 	move_and_slide()
 
-	# Bateu em alguma coisa? Recomeça a fase.
-	if get_slide_collision_count() > 0:
-			print()
+	# Bateu em algum inimigo?
+	for i in get_slide_collision_count():
+		var colisao = get_slide_collision(i)
+		if colisao.get_collider().is_in_group("inimigo"):
+			levar_dano()
 
 	# escolhendo animação
 	if velocity == Vector2.ZERO:
@@ -32,3 +37,21 @@ func _physics_process(_delta: float) -> void:
 		$"Animação".flip_h = true
 	else:
 		$"Animação".flip_h = false
+
+
+
+func levar_dano():
+	if invencivel:
+		return
+
+	vidas -= 1
+	get_tree().call_group("hud", "atualizar", vidas)
+	print("Vidas: ", vidas)
+
+	if vidas <= 0:
+		get_tree().reload_current_scene()
+		return
+
+	invencivel = true
+	await get_tree().create_timer(1.0).timeout
+	invencivel = false
