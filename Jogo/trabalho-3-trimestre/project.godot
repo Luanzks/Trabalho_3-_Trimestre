@@ -21,6 +21,10 @@ window/size/viewport_height=310
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[global_group]
+
+inimigo=""
+
 [input]
 
 Frente={
