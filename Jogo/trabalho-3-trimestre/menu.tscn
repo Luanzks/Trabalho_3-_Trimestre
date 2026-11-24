@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://dhjo5ner1kb7e"]
+
+[ext_resource type="Texture2D" uid="uid://bmiaedabq8j8m" path="res://Sprites/Inimigos/menu.jpg" id="1_ouk20"]
+[ext_resource type="FontFile" uid="uid://bij5s2x0sa4ee" path="res://Sprites/Inimigos/Deadbeat_PERSONAL_USE_ONLY.otf" id="2_mae5d"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3cnmk"]
+texture = ExtResource("1_ouk20")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gyvtx"]
+bg_color = Color(0.28261828, 0.6687788, 0.21082968, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4hy44"]
+bg_color = Color(0.28261828, 0.6687788, 0.21082968, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ytr4m"]
+bg_color = Color(0.28261828, 0.6687788, 0.21082968, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 1
+
+[node name="menu" type="Control" unique_id=67246942]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1980628395]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_3cnmk")
+
+[node name="Label" type="Label" parent="." unique_id=235099408]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -45.5
+offset_top = 43.0
+offset_right = 45.5
+offset_bottom = 66.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 7
+theme_override_fonts/font = ExtResource("2_mae5d")
+theme_override_font_sizes/font_size = 56
+text = "Candy Rush"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=665382923]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=2011439805]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_mae5d")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gyvtx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4hy44")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ytr4m")
+text = "Jogar
+"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1249867735]
+layout_mode = 2
