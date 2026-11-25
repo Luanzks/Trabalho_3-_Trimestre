@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bcexv1ejpk4br" path="res://Cenas/player.tscn" id="2_03mvh"]
 [ext_resource type="Script" uid="uid://dcuuuldljpkpt" path="res://Scripts/gerador_inimigos.gd" id="3_45s2r"]
 [ext_resource type="PackedScene" uid="uid://c8vfy6fxo3m74" path="res://Cenas/mumia.tscn" id="4_xmmbr"]
+[ext_resource type="Script" uid="uid://c7otufmvmvsc4" path="res://Scripts/gerador_item.gd" id="5_ovbra"]
 [ext_resource type="PackedScene" uid="uid://f1vs0kobopee" path="res://Cenas/ceifador.tscn" id="5_p2wm8"]
 [ext_resource type="PackedScene" uid="uid://dw3ox1qop85ea" path="res://Cenas/espantalho.tscn" id="6_r4inx"]
 [ext_resource type="PackedScene" uid="uid://twdkucd5dwqh" path="res://Cenas/fantasma.tscn" id="7_0iqwg"]
@@ -2317,7 +2318,7 @@ shape = SubResource("RectangleShape2D_y0yyv")
 
 [node name="Gerador_Inimigos" type="Node2D" parent="." unique_id=1982600319]
 script = ExtResource("3_45s2r")
-cenas_inimigos = Array[PackedScene]([ExtResource("4_xmmbr"), ExtResource("5_p2wm8"), ExtResource("6_r4inx"), ExtResource("7_0iqwg")])
+cenas_inimigos = Array[PackedScene]([ExtResource("4_xmmbr"), ExtResource("5_p2wm8"), ExtResource("7_0iqwg"), ExtResource("6_r4inx")])
 
 [node name="Timer" type="Timer" parent="Gerador_Inimigos" unique_id=1202161359]
 wait_time = 5.0
@@ -2325,4 +2326,11 @@ wait_time = 5.0
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1171102145]
 script = ExtResource("8_p2wm8")
 
+[node name="Gerador_Item" type="Node2D" parent="." unique_id=1200655412]
+script = ExtResource("5_ovbra")
+
+[node name="Timer" type="Timer" parent="Gerador_Item" unique_id=1215255054]
+wait_time = 3.0
+
 [connection signal="timeout" from="Gerador_Inimigos/Timer" to="Gerador_Inimigos" method="_on_timer_timeout"]
+[connection signal="timeout" from="Gerador_Item/Timer" to="Gerador_Item" method="_on_timer_timeout"]

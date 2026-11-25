@@ -1,0 +1,162 @@
+[gd_scene format=3 uid="uid://32defhy23mlj"]
+
+[ext_resource type="FontFile" uid="uid://bij5s2x0sa4ee" path="res://Sprites/Inimigos/Deadbeat_PERSONAL_USE_ONLY.otf" id="1_5vcb0"]
+
+[node name="Creditos" type="Control" unique_id=119734695]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1662446094]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=892570145]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=65656634]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -79.5
+offset_top = 22.0
+offset_right = 79.5
+offset_bottom = 52.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(3.5629182, 3.5629182, 0, 1)
+theme_override_fonts/font = ExtResource("1_5vcb0")
+theme_override_font_sizes/font_size = 24
+text = "Contrução do Mapa"
+
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=1329108002]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -97.0
+offset_top = -72.0
+offset_right = 97.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(3.5629182, 3.5629182, 0, 1)
+theme_override_fonts/font = ExtResource("1_5vcb0")
+theme_override_font_sizes/font_size = 24
+text = "Programação das Cenas"
+
+[node name="Label3" type="Label" parent="CanvasLayer" unique_id=1051156274]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -123.5
+offset_top = -7.0
+offset_right = 123.5
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(3.5629182, 3.5629182, 0, 1)
+theme_override_fonts/font = ExtResource("1_5vcb0")
+theme_override_font_sizes/font_size = 24
+text = "Programação dos Personagens"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="CanvasLayer" unique_id=544265763]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -79.5
+offset_top = -99.0
+offset_right = 79.5
+offset_bottom = -69.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(3.5629182, 3.5629182, 0, 1)
+theme_override_fonts/font = ExtResource("1_5vcb0")
+theme_override_font_sizes/font_size = 24
+text = "Artes do Jogo"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="CanvasLayer" unique_id=560267489]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -79.5
+offset_top = -73.0
+offset_right = 79.5
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1.209, 0, 3.563, 1)
+theme_override_fonts/font = ExtResource("1_5vcb0")
+theme_override_font_sizes/font_size = 20
+text = "Luan"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="CanvasLayer" unique_id=963584538]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -79.0
+offset_top = -137.0
+offset_right = 80.0
+offset_bottom = -107.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1.209, 0, 3.563, 1)
+theme_override_fonts/font = ExtResource("1_5vcb0")
+theme_override_font_sizes/font_size = 20
+text = "Luan"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="CanvasLayer" unique_id=1381149647]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -78.5
+offset_top = -201.0
+offset_right = 80.5
+offset_bottom = -171.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1.209, 0, 3.563, 1)
+theme_override_fonts/font = ExtResource("1_5vcb0")
+theme_override_font_sizes/font_size = 20
+text = "Pedro"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="CanvasLayer" unique_id=2070337765]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -77.5
+offset_top = -264.0
+offset_right = 81.5
+offset_bottom = -234.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1.209, 0, 3.563, 1)
+theme_override_fonts/font = ExtResource("1_5vcb0")
+theme_override_font_sizes/font_size = 20
+text = "Pedro"
+horizontal_alignment = 1
