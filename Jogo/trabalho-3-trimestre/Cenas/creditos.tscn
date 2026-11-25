@@ -1,6 +1,31 @@
 [gd_scene format=3 uid="uid://32defhy23mlj"]
 
 [ext_resource type="FontFile" uid="uid://bij5s2x0sa4ee" path="res://Sprites/Inimigos/Deadbeat_PERSONAL_USE_ONLY.otf" id="1_5vcb0"]
+[ext_resource type="Script" uid="uid://m7ko3uqsvquy" path="res://Cenas/creditos.gd" id="1_ct8y5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j6m78"]
+bg_color = Color(0.93333334, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a3en7"]
+bg_color = Color(0.93333334, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ep0f"]
+bg_color = Color(0.93333334, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 1
 
 [node name="Creditos" type="Control" unique_id=119734695]
 layout_mode = 3
@@ -9,10 +34,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ct8y5")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1662446094]
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=892570145]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=892570145]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -20,6 +45,30 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=427013543]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1672947421]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_5vcb0")
+theme_override_styles/normal = SubResource("StyleBoxFlat_j6m78")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_a3en7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0ep0f")
+text = "Sair
+"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1662446094]
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=65656634]
 anchors_preset = 5
@@ -160,3 +209,5 @@ theme_override_fonts/font = ExtResource("1_5vcb0")
 theme_override_font_sizes/font_size = 20
 text = "Pedro"
 horizontal_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
